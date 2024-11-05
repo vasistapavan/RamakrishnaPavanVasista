@@ -1,0 +1,51 @@
+header {
+    background-color: #93d0f4;
+    color: white;
+    text-align: center;
+}
+
+section {
+    margin: 20px 0px 20px;
+}
+
+table {
+  border: 1px solid;
+  border-collapse: collapse;
+  width: 100%;
+  border-color: #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+:any-link {
+    color: #0079c1;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #93d0f4;
+    text-align: center;
+    padding: 10px 0px 10px;
+    margin: 20px 0px 0px;
+    color: white;
+}
+
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Add in your own customisations */
