@@ -12,4 +12,4 @@ function findHihghestStockPrice(prices) {
 
 // Write your code below
 
-console.log("AMD 52-week high is " + findHihghestStockPrice(amdPrices));
+console.log("AMD 52-week high is " + Math.max(...amdPrices))

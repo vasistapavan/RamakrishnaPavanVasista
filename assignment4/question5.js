@@ -16,12 +16,11 @@ const disneyData = [
 
 function avgClosingPrice(prices) {
 	let dayClose = 0;
-	let avgClosePrice = 0;
 	for (let price of prices) {
 		dayClose += parseFloat(price['close'])
 	}
-	avgClosePrice = dayClose/prices.length
-    console.log("Average closing price of MSFT is " +  avgClosePrice.toFixed(2))
+	let avgClosePrice = dayClose/prices.length
+    console.log("Average closing price of Disney is " +  avgClosePrice.toFixed(2))
 }
 // Write your code below
 
