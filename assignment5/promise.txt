@@ -1,0 +1,12 @@
+p.then(msg=>console.log(msg))
+p.catch(err=>console.log(err))
+p.then(obj=>console.log(obj))
+p.then(obj=>console.log(obj.name))
+p.catch(error=>console.log(error))
+p.finally(()=>console.log("Promise settled"))
+p.then( value => console.log(value*2) )
+p.catch(message=>console.log(0))
+Promise.all(promises).then(values=>console.log(values))
+Promise.race(promises).then((value)=>console.log(value));
+p.then(msg=> {return Promise.resolve("Hello " + msg)} ).then((msg)=>console.log(msg))
+
