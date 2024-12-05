@@ -1,5 +1,5 @@
 // root.js
-function PublicBlogPost(myblogpost) {
+function PublicBlogPost( {myblogpost} ) {
   return <div className="blog-post">
     <h2>{myblogpost.title}</h2>
     <p className="meta">By {myblogpost.author} on {myblogpost.date}</p>
@@ -7,7 +7,7 @@ function PublicBlogPost(myblogpost) {
   </div>
 }
 
-function PrivateBlogPost(myblogpost) {
+function PrivateBlogPost({myblogpost}) {
 return <div className="private-posts">
   <h2>{myblogpost.title}</h2>
   <p className="meta">By {myblogpost.author} on {myblogpost.date}</p>
@@ -19,15 +19,8 @@ function BlogList( { myblogposts } ) {
 return <div className="blog-list">
   {
     myblogposts.map(
-      (blogpost) => { 
-        return blogpost.private ? 
-         <PrivateBlogPost key={blogpost.title} title={blogpost.title} 
-        author={blogpost.author} date={blogpost.date} />  
-        : <PublicBlogPost key={blogpost.title} title={blogpost.title} 
-        author={blogpost.author} date={blogpost.date} content={blogpost.content}/>
-      }
-      
-    )
+      blogpost => blogpost.private ? <PrivateBlogPost myblogpost={blogpost} />  
+        : <PublicBlogPost myblogpost={blogpost} /> )
   }
 </div>
 }
